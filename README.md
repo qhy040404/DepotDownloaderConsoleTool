@@ -1,6 +1,6 @@
 # DepotDownloaderConsoleTool
 
-A tool for SteamRE/DepotDownloader
+A tool for [SteamRE/DepotDownloader](https://github.com/SteamRE/DepotDownloader)
 
 This tool includes SteamRE/DepotDownloader ver2.4.5
 

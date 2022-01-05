@@ -1,11 +1,21 @@
 #include <iostream>
-#include <cstdlib>
 #include <fstream>
 #include <conio.h>
+#include <string>
+#include <windows.h>
 using namespace std;
 int main(void)
 {
-	char appid, depotid, manifest, username;
+	char TempPath[MAX_PATH] = { 0 };
+	GetTempPathA(MAX_PATH, TempPath);//获取temp路径
+	string outPath = TempPath;
+	outPath += "config.bat";
+	char AppPath[MAX_PATH] = { 0 };
+	GetCurrentDirectoryA(MAX_PATH, AppPath);//获取当前路径
+	string DllPath = AppPath;
+	DllPath += "\\DepotDownloader.dll";
+	int appid, depotid, manifest;
+	char username;
 	int looklook;
 	cout << "Welcome! This is a game depot downloader, which download a depot package from Steam servers." << endl;
 	cout << "Follow the guide to download any depot packages you want.(Exclude workshop)" << endl;
@@ -14,22 +24,25 @@ int main(void)
 	cin >> appid;
 	cout << endl <<"Second, the depot ID:";
 	cin >> depotid;
-	cout << endl << "Then, the manifest ID(This determines the version you want to download:";
+	cout << endl << "Then, the manifest ID(This determines the version you want to download):";
 	cin >> manifest;
 	cout << endl << "Whether the package you want to download is free(0) or paid(1)(input the number):";
 	cin >> looklook;
+	string dir = "C:\\Depots";
 	if (looklook == 0)
 	{
 		system("cls");
 		cout << "Congratulations! You have inputted the information we need." << endl;
+		cout << "Default download location is C:\\Depots" << endl;
 		cout << "The download is starting and the program will automatically close after the download is completed." << endl;
-		ofstream out("config.bat");
+		ofstream out;
+		out.open(outPath.c_str());
 		out << "@echo off" << endl;
 		cout << endl;
-		out << "dotnet DepotDownloader.dll -app " << appid << " -depot " << depotid << " -manifest " << manifest;
+		out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str();
 		out.close();
-		system("config.bat");
-		system("timeout 1 >nul && del config.bat");
+		system("%temp%\\config.bat");
+		system("timeout 1 >nul && del %temp%\\config.bat");
 	}
 	else if (looklook == 1)
 	{
@@ -68,14 +81,14 @@ int main(void)
 		system("cls");
 		cout << "Congratulations! You have inputted the information we need." << endl;
 		cout << "The download is starting and the program will automatically close after the download is completed." << endl;
-		ofstream out("config.bat");
+		ofstream out;
+		out.open(outPath.c_str());
 		out << "@echo off" << endl;
 		cout << endl;
-		out << "dotnet DepotDownloader.dll -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -username " << username << " -password " << password;
+		out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str() << " -username " << username << " -password " << password;
 		out.close();
-		system("config.bat");
-		system("timeout 1 >nul && del config.bat");
-
+		system("%temp%\\config.bat");
+		system("timeout 1 >nul && del %temp%\\config.bat");
 	}
 	return 0;
 }

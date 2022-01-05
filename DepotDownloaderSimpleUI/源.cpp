@@ -23,11 +23,13 @@ int main(void)
 		system("cls");
 		cout << "Congratulations! You have inputted the information we need." << endl;
 		cout << "The download is starting and the program will automatically close after the download is completed." << endl;
-		ofstream out("./Resources/config.bat");
+		ofstream out("config.bat");
+		out << "@echo off" << endl;
+		cout << endl;
 		out << "dotnet DepotDownloader.dll -app " << appid << " -depot " << depotid << " -manifest " << manifest;
 		out.close();
 		system("config.bat");
-		system("timeout 1 >nul && del Resources\\config.bat");
+		system("timeout 1 >nul && del config.bat");
 	}
 	else if (looklook == 1)
 	{
@@ -66,11 +68,13 @@ int main(void)
 		system("cls");
 		cout << "Congratulations! You have inputted the information we need." << endl;
 		cout << "The download is starting and the program will automatically close after the download is completed." << endl;
-		ofstream out("./Resources/config.bat");
+		ofstream out("config.bat");
+		out << "@echo off" << endl;
+		cout << endl;
 		out << "dotnet DepotDownloader.dll -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -username " << username << " -password " << password;
 		out.close();
 		system("config.bat");
-		system("timeout 1 >nul && del Resources\\config.bat");
+		system("timeout 1 >nul && del config.bat");
 
 	}
 	return 0;

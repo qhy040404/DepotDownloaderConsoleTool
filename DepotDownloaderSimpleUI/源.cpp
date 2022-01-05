@@ -75,7 +75,6 @@ int main(void)
 		out.close();
 		system("config.bat");
 		system("timeout 1 >nul && del config.bat");
-
 	}
 	return 0;
 }

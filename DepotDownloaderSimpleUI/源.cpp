@@ -14,8 +14,9 @@ int main(void)
 	GetCurrentDirectoryA(MAX_PATH, AppPath);//获取当前路径
 	string DllPath = AppPath;
 	DllPath += "\\DepotDownloader.dll";
-	int appid, depotid, manifest;
-	char username;
+	int appid, depotid;
+	__int64 manifest;
+	string username;
 	int looklook;
 	cout << "Welcome! This is a game depot downloader, which download a depot package from Steam servers." << endl;
 	cout << "Follow the guide to download any depot packages you want.(Exclude workshop)" << endl;
@@ -50,6 +51,7 @@ int main(void)
 		cout << "ATTENTION! The account you input must have a license of the paid game. It means that you have already bought the game." << endl;
 		cout << endl << "Please input your username:";
 		cin >> username;
+		cout << username.c_str();
 		cout << endl << "And the password:";
 		char password[100];
 		int index = 0;
@@ -85,7 +87,7 @@ int main(void)
 		out.open(outPath.c_str());
 		out << "@echo off" << endl;
 		cout << endl;
-		out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str() << " -username " << username << " -password " << password;
+		out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str() << " -username " << username.c_str() << " -password " << password;
 		out.close();
 		system("%temp%\\config.bat");
 		system("timeout 1 >nul && del %temp%\\config.bat");

@@ -5,11 +5,19 @@
 #include <windows.h>
 using namespace std;
 
-void defaultPrompt()
+void defaultPromptForDepots()
 {
 	system("cls");
 	cout << "Congratulations! You have inputted the information we need." << endl;
 	cout << "Default download location is C:\\Depots" << endl;
+	cout << "The download is starting and the program will automatically close after the download is completed." << endl;
+}
+
+void defaultPromptForWorkshop()
+{
+	system("cls");
+	cout << "Congratulations! You have inputted the information we need." << endl;
+	cout << "Default download location is C:\\WorkshopItems" << endl;
 	cout << "The download is starting and the program will automatically close after the download is completed." << endl;
 }
 
@@ -60,7 +68,7 @@ int main(void)
 			string dir = "C:\\Depots";
 			if (looklook == 48)
 			{
-				defaultPrompt();
+				defaultPromptForDepots();
 				ofstream out;
 				out.open(outPath.c_str());
 				out << "@echo off" << endl;
@@ -103,7 +111,7 @@ int main(void)
 						password[index++] = ch;
 					}
 				}
-				defaultPrompt();
+				defaultPromptForDepots();
 				ofstream out;
 				out.open(outPath.c_str());
 				out << "@echo off" << endl;
@@ -122,15 +130,15 @@ int main(void)
 			cout << endl << "And the pubfile ID:";
 			cin >> pubfile;
 			string dir = "C:\\WorkshopItems";
-				defaultPrompt();
-				ofstream out;
-				out.open(outPath.c_str());
-				out << "@echo off" << endl;
-				cout << endl;
-				out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -pubfile " << pubfile << " -dir " << dir.c_str();
-				out.close();
-				autoRun();
-				break;
+			defaultPromptForWorkshop();
+			ofstream out;
+			out.open(outPath.c_str());
+			out << "@echo off" << endl;
+			cout << endl;
+			out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -pubfile " << pubfile << " -dir " << dir.c_str();
+			out.close();
+			autoRun();
+			break;
 		}
 		else if (selection == 51)
 		{
@@ -140,7 +148,7 @@ int main(void)
 			cout << endl << "And the UGC ID:";
 			cin >> ugc;
 			string dir = "C:\\WorkshopItems";
-			defaultPrompt();
+			defaultPromptForWorkshop();
 			ofstream out;
 			out.open(outPath.c_str());
 			out << "@echo off" << endl;

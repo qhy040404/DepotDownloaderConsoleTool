@@ -28,9 +28,9 @@ int main(void)
 	cout << endl << "Then, the manifest ID(This determines the version you want to download):";
 	cin >> manifest;
 	cout << endl << "Whether the package you want to download is free(0) or paid(1)(input the number):";
-	cin >> looklook;
+	looklook = _getch();
 	string dir = "C:\\Depots";
-	if (looklook == 0)
+	if (looklook == 48)
 	{
 		system("cls");
 		cout << "Congratulations! You have inputted the information we need." << endl;
@@ -45,7 +45,7 @@ int main(void)
 		system("%temp%\\config.bat");
 		system("timeout 1 >nul && del %temp%\\config.bat");
 	}
-	else if (looklook == 1)
+	else if (looklook == 49)
 	{
 		system("cls");
 		cout << "ATTENTION! The account you input must have a license of the paid game. It means that you have already bought the game." << endl;

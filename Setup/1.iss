@@ -1,5 +1,5 @@
 #define MyAppName "DepotDownloader Console Tool"
-#define MyAppVersion "1.2.2"
+#define MyAppVersion "1.3.0"
 #define MyAppPublisher "qhy"
 #define MyAppExeName "DepotDownloaderSimpleUI.exe"
 

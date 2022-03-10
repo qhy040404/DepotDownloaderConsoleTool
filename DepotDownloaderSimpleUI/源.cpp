@@ -5,20 +5,12 @@
 #include <windows.h>
 using namespace std;
 
-void defaultPromptForDepots()
+void defaultPrompt()
 {
 	system("cls");
 	cout << "Congratulations! You have inputted the information we need." << endl;
-	cout << "Default download location is C:\\Depots" << endl;
 	cout << "The download is starting and the program will automatically close after the download is completed." << endl;
-}
-
-void defaultPromptForWorkshop()
-{
-	system("cls");
-	cout << "Congratulations! You have inputted the information we need." << endl;
-	cout << "Default download location is C:\\WorkshopItems" << endl;
-	cout << "The download is starting and the program will automatically close after the download is completed." << endl;
+	cout << "Current download location is: ";
 }
 
 void autoRun()
@@ -44,6 +36,7 @@ int main(void)
 	int looklook;
 	while (1)
 	{
+		system("cls");
 		cout << "Welcome! This is a game depot downloader, which download a depot package from Steam servers." << endl;
 		cout << "Follow the guide to download any depot packages you want." << endl;
 		cout << "All needed IDs can be found on SteamDB." << endl << endl;
@@ -79,12 +72,31 @@ int main(void)
 			cin >> depotid;
 			cout << endl << "Then, the manifest ID(This determines the version you want to download):";
 			cin >> manifest;
+			string dir = "C:\\Depots";
+			cout << endl << "Default download location is C:\\Depots" << endl;
+			cout << "If it's OK, press Enter" << endl;
+			cout << "If you want to change it, Just input new location here:";
+			char dirConfirm;
+			dirConfirm = _getch();
+			if (dirConfirm == '\r') 
+			{
+				cout << endl;
+			}
+			else
+			{
+				string firstDir;
+				firstDir = char(dirConfirm);
+				cout << firstDir;
+				string restDir;
+				cin >> restDir;
+				dir = firstDir + restDir;
+			}
 			cout << endl << "Whether the package you want to download is free(0) or paid(1)(input the number):";
 			looklook = _getch();
-			string dir = "C:\\Depots";
 			if (looklook == 48)
 			{
-				defaultPromptForDepots();
+				defaultPrompt();
+				cout << dir.c_str() << endl;
 				ofstream out;
 				out.open(outPath.c_str());
 				out << "@echo off" << endl;
@@ -127,7 +139,8 @@ int main(void)
 						password[index++] = ch;
 					}
 				}
-				defaultPromptForDepots();
+				defaultPrompt();
+				cout << dir.c_str() << endl;
 				ofstream out;
 				out.open(outPath.c_str());
 				out << "@echo off" << endl;
@@ -146,7 +159,23 @@ int main(void)
 			cout << endl << "And the pubfile ID:";
 			cin >> pubfile;
 			string dir = "C:\\WorkshopItems";
-			defaultPromptForWorkshop();
+			cout << endl << "Default download location is C:\\WorkshopItems" << endl;
+			cout << "If it's OK, press Enter" << endl;
+			cout << "If you want to change it, Just input new location here:";
+			char dirConfirm;
+			dirConfirm = _getch();
+			if (dirConfirm == '\r') {}
+			else
+			{
+				string firstDir;
+				firstDir = char(dirConfirm);
+				cout << firstDir;
+				string restDir;
+				cin >> restDir;
+				dir = firstDir + restDir;
+			}
+			defaultPrompt();
+			cout << dir.c_str() << endl;
 			ofstream out;
 			out.open(outPath.c_str());
 			out << "@echo off" << endl;
@@ -164,7 +193,23 @@ int main(void)
 			cout << endl << "And the UGC ID:";
 			cin >> ugc;
 			string dir = "C:\\WorkshopItems";
-			defaultPromptForWorkshop();
+			cout << endl << "Default download location is C:\\WorkshopItems" << endl;
+			cout << "If it's OK, press Enter" << endl;
+			cout << "If you want to change it, Just input new location here:";
+			char dirConfirm;
+			dirConfirm = _getch();
+			if (dirConfirm == '\r') {}
+			else
+			{
+				string firstDir;
+				firstDir = char(dirConfirm);
+				cout << firstDir;
+				string restDir;
+				cin >> restDir;
+				dir = firstDir + restDir;
+			}
+			defaultPrompt();
+			cout << dir.c_str() << endl;
 			ofstream out;
 			out.open(outPath.c_str());
 			out << "@echo off" << endl;

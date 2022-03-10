@@ -30,14 +30,15 @@ void autoRun()
 int main(void)
 {
 	char TempPath[MAX_PATH] = { 0 };
-	GetTempPathA(MAX_PATH, TempPath);//获取temp路径
+	GetTempPathA(MAX_PATH, TempPath);//get %temp%
 	string outPath = TempPath;
 	outPath += "config.bat";
 	char AppPath[MAX_PATH] = { 0 };
-	GetCurrentDirectoryA(MAX_PATH, AppPath);//获取当前路径
+	GetCurrentDirectoryA(MAX_PATH, AppPath);//get current directory
 	string DllPath = AppPath;
 	DllPath += "\\DepotDownloader.dll";
-	int appid, depotid;
+	string appid;
+	int depotid;
 	__int64 manifest, pubfile, ugc;
 	string username;
 	int looklook;
@@ -57,8 +58,23 @@ int main(void)
 		if (selection == 49)
 		{
 			system("cls");
-			cout << "First, input the AppID:";
-			cin >> appid;
+			cout << "First, input the AppID(Press W to go to SteamDB):";
+			char ifSteamDB;
+			ifSteamDB = _getch();
+			if (ifSteamDB == 119 || ifSteamDB == 87)
+			{
+				system("start http://steamdb.info");
+				cin >> appid;
+			}
+			else
+			{
+				string appidTemp;
+				appidTemp = char(ifSteamDB); //ASCII transform
+				cout << appidTemp;
+				string restAppID;
+				cin >> restAppID;
+				appid = appidTemp + restAppID;
+			}
 			cout << endl << "Second, the depot ID:";
 			cin >> depotid;
 			cout << endl << "Then, the manifest ID(This determines the version you want to download):";
@@ -73,7 +89,7 @@ int main(void)
 				out.open(outPath.c_str());
 				out << "@echo off" << endl;
 				cout << endl;
-				out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str();
+				out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid.c_str() << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str();
 				out.close();
 				autoRun();
 				break;
@@ -99,7 +115,7 @@ int main(void)
 							index--;
 						}
 					}
-					else if (ch == '\r')//回车
+					else if (ch == '\r')//enter
 					{
 						password[index] = '\0';
 						cout << endl;
@@ -116,7 +132,7 @@ int main(void)
 				out.open(outPath.c_str());
 				out << "@echo off" << endl;
 				cout << endl;
-				out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str() << " -username " << username.c_str() << " -password " << password;
+				out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid.c_str() << " -depot " << depotid << " -manifest " << manifest << " -dir " << dir.c_str() << " -username " << username.c_str() << " -password " << password;
 				out.close();
 				autoRun();
 				break;
@@ -135,7 +151,7 @@ int main(void)
 			out.open(outPath.c_str());
 			out << "@echo off" << endl;
 			cout << endl;
-			out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -pubfile " << pubfile << " -dir " << dir.c_str();
+			out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid.c_str() << " -pubfile " << pubfile << " -dir " << dir.c_str();
 			out.close();
 			autoRun();
 			break;
@@ -153,7 +169,7 @@ int main(void)
 			out.open(outPath.c_str());
 			out << "@echo off" << endl;
 			cout << endl;
-			out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid << " -ugc " << ugc << " -dir " << dir.c_str();
+			out << "dotnet \"" << DllPath.c_str() << "\" -app " << appid.c_str() << " -ugc " << ugc << " -dir " << dir.c_str();
 			out.close();
 			autoRun();
 			break;

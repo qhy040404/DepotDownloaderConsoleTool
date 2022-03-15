@@ -142,6 +142,7 @@
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Setup\1.iss" />
     <None Include="Resources\DepotDownloader.deps.json">
       <DeploymentContent>true</DeploymentContent>
     </None>
@@ -175,6 +176,8 @@
     <None Include="Resources\SteamKit2.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
+    <None Include="windowsdesktop-runtime-6.0.3-win-x64.exe" />
+    <None Include="windowsdesktop-runtime-6.0.3-win-x86.exe" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />

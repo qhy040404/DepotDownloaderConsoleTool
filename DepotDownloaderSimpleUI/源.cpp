@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <string>
 #include <windows.h>
+#include <io.h>
 using namespace std;
 
 void defaultPrompt()
@@ -19,16 +20,52 @@ void autoRun()
 	system("timeout 1 >nul && del %temp%\\config.bat");
 }
 
+int checkArch()
+{
+	void* number = 0;
+	return sizeof(&number);
+}
+
 int main(void)
 {
 	char TempPath[MAX_PATH] = { 0 };
 	GetTempPathA(MAX_PATH, TempPath);//get %temp%
-	string outPath = TempPath;
-	outPath += "config.bat";
 	char AppPath[MAX_PATH] = { 0 };
-	GetCurrentDirectoryA(MAX_PATH, AppPath);//get current directory
+	GetCurrentDirectoryA(MAX_PATH, AppPath);//get current directory //get existing directory
+	if (!_access("C:\\Program Files\\dotnet\\dotnet.exe", 0))//detect if dotnet is installed
+	{
+		cout << ".NET Environment Detected. Jumping...";
+		system("timeout 2 >nul && cls");
+	}
+	else
+	{
+		cout << ".NET Environment not available." << endl;
+		cout << "We will install .NET Runtime 6.0.3 for you." << endl;
+		cout << "Please wait while quiet installing." << endl;
+		string installBatchPath = TempPath;
+		installBatchPath += "install.bat";
+		string installerPath = AppPath;
+		if (checkArch() == 4)
+		{
+			installerPath += "windowsdesktop-runtime-6.0.3-win-x86.exe /q";
+		}
+		else if (checkArch() == 8)
+		{
+			installerPath += "windowsdesktop-runtime-6.0.3-win-x64.exe /q";
+		}
+		ofstream inst;
+		inst.open(installBatchPath.c_str());
+		inst << "@echo off" << endl;
+		cout << endl;
+		inst << "start " << installerPath.c_str() << endl;
+		inst.close();
+		system("%temp\\install.bat");
+		system("timeout 1 >nul && del %temp%\\install.bat");
+	}
+	string outPath = TempPath;
 	string DllPath = AppPath;
-	DllPath += "\\DepotDownloader.dll";
+	outPath += "config.bat";//set bat path
+	DllPath += "\\DepotDownloader.dll";//set dll path
 	string appid;
 	int depotid;
 	__int64 manifest, pubfile, ugc;

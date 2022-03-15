@@ -1,5 +1,5 @@
 #define MyAppName "DepotDownloader Console Tool"
-#define MyAppVersion "1.3.1"
+#define MyAppVersion "1.4.0"
 #define MyAppPublisher "qhy"
 #define MyAppExeName "DepotDownloaderSimpleUI.exe"
 
@@ -12,7 +12,6 @@ DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
 DisableWelcomePage=no
 LicenseFile=J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\LICENSE
-InfoBeforeFile=J:\VSProjs\DepotDownloaderSimpleUI\Setup\before.txt
 OutputBaseFilename=DepotDownloader Console Tool Installer
 SetupIconFile=J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\down.ico
 Compression=lzma
@@ -39,6 +38,8 @@ Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\De
 Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\protobuf-net.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\protobuf-net.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\SteamKit2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\windowsdesktop-runtime-6.0.3-win-x64.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\windowsdesktop-runtime-6.0.3-win-x86.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

@@ -16,6 +16,9 @@
     <Filter Include="资源文件\Resources">
       <UniqueIdentifier>{594d5891-fc5b-436f-bb6a-28165f60f17f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="资源文件\Setup">
+      <UniqueIdentifier>{21fc5419-3bc8-46dc-81b0-df3b27423186}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DepotDownloader.deps.json">
@@ -50,6 +53,15 @@
     </None>
     <None Include="Resources\SteamKit2.dll">
       <Filter>资源文件\Resources</Filter>
+    </None>
+    <None Include="windowsdesktop-runtime-6.0.3-win-x64.exe">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="windowsdesktop-runtime-6.0.3-win-x86.exe">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Setup\1.iss">
+      <Filter>资源文件\Setup</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

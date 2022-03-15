@@ -12,7 +12,7 @@ DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
 DisableWelcomePage=no
 LicenseFile=J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\LICENSE
-OutputBaseFilename=DepotDownloader Console Tool Installer
+OutputBaseFilename=DepotDownloader Console Tool Installer With .NET Installer
 SetupIconFile=J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\down.ico
 Compression=lzma
 SolidCompression=yes
@@ -22,6 +22,7 @@ WizardSmallImageFile=J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\
 
 [Languages]
 Name: "chinesesimp"; MessagesFile: "compiler:Default.isl"
+Name: "en"; MessagesFile: "compiler:Languages\English.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"

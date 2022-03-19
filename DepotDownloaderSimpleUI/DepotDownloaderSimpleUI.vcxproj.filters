@@ -60,7 +60,10 @@
     <None Include="windowsdesktop-runtime-6.0.3-win-x86.exe">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="..\Setup\1.iss">
+    <None Include="..\Setup\include-netinstaller.iss">
+      <Filter>资源文件\Setup</Filter>
+    </None>
+    <None Include="..\Setup\without-netinstaller.iss">
       <Filter>资源文件\Setup</Filter>
     </None>
   </ItemGroup>
@@ -89,5 +92,10 @@
     <Image Include="icons\down-10种尺寸.ico">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Setup\before.txt">
+      <Filter>资源文件\Setup</Filter>
+    </Text>
   </ItemGroup>
 </Project>

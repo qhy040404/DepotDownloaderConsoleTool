@@ -142,7 +142,8 @@
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Setup\1.iss" />
+    <None Include="..\Setup\include-netinstaller.iss" />
+    <None Include="..\Setup\without-netinstaller.iss" />
     <None Include="Resources\DepotDownloader.deps.json">
       <DeploymentContent>true</DeploymentContent>
     </None>
@@ -189,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="icons\down-10种尺寸.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Setup\before.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

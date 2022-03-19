@@ -4,7 +4,7 @@
 #define MyAppExeName "DepotDownloaderSimpleUI.exe"
 
 [Setup]
-AppId={{8E6BB262-3343-412F-9297-0632641E3C37}
+AppId={{9BCE7A22-4E14-483F-A41D-FF1CD23E6B02}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
@@ -44,6 +44,9 @@ Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\St
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+
+[Run]
+Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
 [UninstallDelete]
 Type: files; Name: "{app}\config.bat"

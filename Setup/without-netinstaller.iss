@@ -30,16 +30,13 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "J:\VSProjs\DepotDownloaderSimpleUI\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\Release\DepotDownloaderSimpleUI.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\DepotDownloader.deps.json"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\DepotDownloader.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\DepotDownloader.dll.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\DepotDownloader.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\DepotDownloader.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\DepotDownloader.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\protobuf-net.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\protobuf-net.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderSimpleUI\DepotDownloaderSimpleUI\Resources\SteamKit2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\DepotDownloader.deps.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\DepotDownloader.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\DepotDownloader.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\DepotDownloader.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\protobuf-net.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\protobuf-net.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\SteamKit2.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

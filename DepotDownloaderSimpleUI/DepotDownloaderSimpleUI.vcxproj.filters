@@ -66,6 +66,18 @@
     <None Include="..\Setup\without-netinstaller.iss">
       <Filter>资源文件\Setup</Filter>
     </None>
+    <None Include="..\.gitattributes">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\.gitignore">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\LICENSE">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\README.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp">

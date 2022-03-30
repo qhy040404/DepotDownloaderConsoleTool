@@ -142,6 +142,10 @@
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.gitattributes" />
+    <None Include="..\.gitignore" />
+    <None Include="..\LICENSE" />
+    <None Include="..\README.md" />
     <None Include="..\Setup\include-netinstaller.iss" />
     <None Include="..\Setup\without-netinstaller.iss" />
     <None Include="Resources\DepotDownloader.deps.json">

@@ -1,7 +1,7 @@
 #define MyAppName "DepotDownloader Console Tool"
 #define MyAppVersion "1.4.3"
 #define MyAppPublisher "qhy040404"
-#define MyAppExeName "DepotDownloaderSimpleUI.exe"
+#define MyAppExeName "DepotDownloaderConsoleTool.exe"
 
 [Setup]
 AppId={{8E6BB262-3343-412F-9297-0632641E3C37}
@@ -38,6 +38,7 @@ Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\protobuf-
 Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\SteamKit2.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "J:\VSProjs\DepotDownloaderConsoleTool\res\windowsdesktop-runtime-6.0.3-win-x64.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "J:\VSProjs\DepotDownloaderConsoleTool\res\windowsdesktop-runtime-6.0.3-win-x86.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "J:\VSProjs\DepotDownloaderConsoleTool\x64\Release\DotnetInstallHelper.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

@@ -47,21 +47,11 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// Icon
-//
-
-// Icon with lowest ID value placed first to ensure application icon
-// remains consistent on all systems.
-IDI_ICON1               ICON                    "res\\icon.ico"
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 // Version
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,5,0,0
+ FILEVERSION 1,0,0,0
  PRODUCTVERSION 1,5,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -78,11 +68,11 @@ BEGIN
         BLOCK "080404b0"
         BEGIN
             VALUE "CompanyName", "qhy040404"
-            VALUE "FileDescription", "DepotDownloader Console Tool"
-            VALUE "FileVersion", "1.5.0.0"
-            VALUE "InternalName", "DepotDownloaderConsoleTool.exe"
+            VALUE "FileDescription", ".NET Installation Helper"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "DotnetInstallHelper.exe"
             VALUE "LegalCopyright", "Copyright (C) 2022 qhy040404"
-            VALUE "OriginalFilename", "DepotDownloaderConsoleTool.exe"
+            VALUE "OriginalFilename", "DotnetInstallHelper.exe"
             VALUE "ProductName", "DepotDownloader Console Tool"
             VALUE "ProductVersion", "1.5.0.0"
         END
@@ -92,6 +82,16 @@ BEGIN
         VALUE "Translation", 0x804, 1200
     END
 END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res\\icon_dotnetHelper.ico"
 
 #endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////

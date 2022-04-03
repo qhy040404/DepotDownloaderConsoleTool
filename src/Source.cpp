@@ -5,6 +5,7 @@
 #include <windows.h>
 #include <io.h>
 #include "../header/func_ez.h"
+#include "../header/exe.h"
 using namespace std;
 
 int main(void)
@@ -21,27 +22,10 @@ int main(void)
 	else
 	{
 		cout << ".NET Environment not available." << endl;
-		cout << "We will install .NET Runtime 6.0.3 for you." << endl;
-		cout << "Please wait while quiet installing." << endl;
-		string installBatchPath = TempPath;
-		installBatchPath += "install.bat";
-		string installerPath = AppPath;
-		if (checkArch() == 4)
-		{
-			installerPath += "\\windowsdesktop-runtime-6.0.3-win-x86.exe /q";
-		}
-		else if (checkArch() == 8)
-		{
-			installerPath += "\\windowsdesktop-runtime-6.0.3-win-x64.exe /q";
-		}
-		ofstream inst;
-		inst.open(installBatchPath.c_str());
-		inst << "@echo off" << endl;
-		cout << endl;
-		inst << "start " << installerPath.c_str() << endl;
-		inst.close();
-		system("%temp%\\install.bat");
-		system("timeout 1 >nul && del %temp%\\install.bat");
+		cout << "Starting .NET installation helper..." << endl;
+		system("timeout 1 >nul");
+		Execute("DotnetInstallHelper.exe");
+		exit(0);
 	}
 	string outPath = TempPath;
 	string DllPath = AppPath;

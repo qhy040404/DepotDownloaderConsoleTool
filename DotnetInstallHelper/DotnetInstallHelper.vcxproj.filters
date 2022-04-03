@@ -13,21 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="资源文件\dotnet-inst">
-      <UniqueIdentifier>{8d5cb02b-7cae-481e-9255-d83ee88eafec}</UniqueIdentifier>
-    </Filter>
     <Filter Include="资源文件\icon-photo">
-      <UniqueIdentifier>{2a1ee1df-6179-433d-b53a-495b672c1612}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="资源文件\setup-script">
-      <UniqueIdentifier>{965274d0-ea08-4d38-913d-9d44d3a33275}</UniqueIdentifier>
+      <UniqueIdentifier>{617a9dd7-2b9d-4320-8b5e-f00c80fa8437}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Source.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\func_ez.cpp">
+    <ClCompile Include="src\Mgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\arch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\exe.cpp">
@@ -35,37 +32,18 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\runtime-x64.exe">
-      <Filter>资源文件\dotnet-inst</Filter>
-    </None>
-    <None Include="res\runtime-x86.exe">
-      <Filter>资源文件\dotnet-inst</Filter>
-    </None>
-    <None Include="setup\include-netinstaller.iss">
-      <Filter>资源文件\setup-script</Filter>
-    </None>
-    <None Include="setup\without-netinstaller.iss">
-      <Filter>资源文件\setup-script</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="header\func_ez.h">
+    <ClInclude Include="header\Mgr.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="header\arch.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="header\exe.h">
       <Filter>头文件</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\icon.ico">
-      <Filter>资源文件\icon-photo</Filter>
-    </Image>
-    <Image Include="res\icon_origin.png">
-      <Filter>资源文件\icon-photo</Filter>
-    </Image>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc">
@@ -73,8 +51,8 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="setup\before.txt">
-      <Filter>资源文件\setup-script</Filter>
-    </Text>
+    <Image Include="res\icon_dotnetHelper.ico">
+      <Filter>资源文件\icon-photo</Filter>
+    </Image>
   </ItemGroup>
 </Project>

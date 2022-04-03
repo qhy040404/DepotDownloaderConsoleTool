@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c1a3b2b1-e4ad-4a05-b750-696ba221a5b2}</ProjectGuid>
-    <RootNamespace>DepotDownloaderConsoleTool</RootNamespace>
+    <ProjectGuid>{bf5599cb-8621-4a4c-86ce-9b582d7cb08b}</ProjectGuid>
+    <RootNamespace>DotnetInstallHelper</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,30 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\arch.cpp" />
     <ClCompile Include="src\exe.cpp" />
-    <ClCompile Include="src\func_ez.cpp" />
+    <ClCompile Include="src\Mgr.cpp" />
     <ClCompile Include="src\Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\runtime-x64.exe" />
-    <None Include="res\runtime-x86.exe" />
-    <None Include="setup\include-netinstaller.iss" />
-    <None Include="setup\without-netinstaller.iss" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="header\arch.h" />
     <ClInclude Include="header\exe.h" />
-    <ClInclude Include="header\func_ez.h" />
+    <ClInclude Include="header\Mgr.h" />
     <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\icon.ico" />
-    <Image Include="res\icon_origin.png" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="setup\before.txt" />
+    <Image Include="res\icon_dotnetHelper.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

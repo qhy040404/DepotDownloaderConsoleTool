@@ -1,7 +1,9 @@
 //func_ez.cpp
 #include <iostream>
 #include <Windows.h>
+#include <io.h>
 using namespace std;
+
 void defaultPrompt()
 {
 	system("cls");
@@ -21,4 +23,16 @@ int checkArch()
 {
 	void* number = 0;
 	return sizeof(&number);
+}
+
+bool checkVer()
+{
+	if (!_access("DotnetInstallHelper.exe", 0))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

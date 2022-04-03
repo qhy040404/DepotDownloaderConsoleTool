@@ -37,7 +37,6 @@ Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\DepotDown
 Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\protobuf-net.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\protobuf-net.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "J:\VSRepos\DepotDownloader\DepotDownloader\bin\Release\net6.0\SteamKit2.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "J:\VSProjs\DepotDownloaderConsoleTool\x64\Release\DotnetInstallHelper.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

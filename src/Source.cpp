@@ -22,10 +22,21 @@ int main(void)
 	else
 	{
 		cout << ".NET Environment not available." << endl;
-		cout << "Starting .NET installation helper..." << endl;
-		system("timeout 1 >nul");
-		Execute("DotnetInstallHelper.exe");
-		exit(0);
+		if (checkVer() == true) 
+		{
+			cout << "Starting .NET installation helper..." << endl;
+			system("timeout 1 >nul");
+			Execute("DotnetInstallHelper.exe");
+			exit(0);
+		}
+		else
+		{
+			cout << "This version doesn't include .NET installer." << endl;
+			cout << "Please go to https://dotnet.microsoft.com/download/dotnet to download .NET Runtime and install manually." << endl;
+			cout << "Press any key to exit.";
+			system("pause >nul");
+			exit(0);
+		}
 	}
 	string outPath = TempPath;
 	string DllPath = AppPath;

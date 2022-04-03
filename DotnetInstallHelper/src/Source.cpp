@@ -34,10 +34,13 @@ int main(int argc, char* argv[])
 		{
 			cout << "Your system is x64, We are going to install x64 runtime for you." << endl;
 			system("timeout 1 >nul && cls");
-			cout << "Installing... Please wait.";
+			cout << "Installing... Please wait." << endl;
 			Execute_x64();
 		}
+		system("cls");
+		cout << endl;
 		cout << "Installation has completed, returning to the main program.";
+		system("timeout 1 >nul");
 		NormalExecute("DepotDownloaderConsoleTool.exe");
 	}
 	return 0;

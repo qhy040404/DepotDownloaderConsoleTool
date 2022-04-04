@@ -1,5 +1,10 @@
 # DepotDownloaderConsoleTool
 
+[![Build status (GitHub)](https://img.shields.io/github/workflow/status/qhy040404/DepotDownloaderConsoleTool/Compile-CI/master?label=Compile&logo=github&cacheSeconds=600)](https://github.com/qhy040404/DepotDownloaderConsoleTool/actions)
+[![CodeFactor](https://www.codefactor.io/repository/github/qhy040404/depotdownloaderconsoletool/badge)](https://www.codefactor.io/repository/github/qhy040404/depotdownloaderconsoletool)
+[![Github last commit date](https://img.shields.io/github/last-commit/qhy040404/DepotDownloaderConsoleTool.svg?label=Updated&logo=github&cacheSeconds=600)](https://github.com/qhy040404/DepotDownloaderConsoleTool/commits)
+[![License](https://img.shields.io/github/license/qhy040404/DepotDownloaderConsoleTool.svg?label=License&logo=github&cacheSeconds=2592000)](https://github.com/qhy040404/DepotDownloaderConsoleTool/blob/master/LICENSE)
+
 A tool for [SteamRE/DepotDownloader](https://github.com/SteamRE/DepotDownloader)
 
 ## Includes

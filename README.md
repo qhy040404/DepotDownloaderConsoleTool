@@ -5,6 +5,8 @@
 [![Github last commit date](https://img.shields.io/github/last-commit/qhy040404/DepotDownloaderConsoleTool.svg?label=Updated&logo=github&cacheSeconds=600)](https://github.com/qhy040404/DepotDownloaderConsoleTool/commits)
 [![License](https://img.shields.io/github/license/qhy040404/DepotDownloaderConsoleTool.svg?label=License&logo=github&cacheSeconds=2592000)](https://github.com/qhy040404/DepotDownloaderConsoleTool/blob/master/LICENSE)
 
+![GitHub top language](https://img.shields.io/github/languages/top/qhy040404/DepotDownloaderConsoleTool)
+
 A tool for [SteamRE/DepotDownloader](https://github.com/SteamRE/DepotDownloader)
 
 ## Includes

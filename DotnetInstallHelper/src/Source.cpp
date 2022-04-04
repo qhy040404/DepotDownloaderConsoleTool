@@ -38,7 +38,6 @@ int main(int argc, char* argv[])
 			Execute_x64();
 		}
 		system("cls");
-		cout << endl;
 		cout << "Installation has completed, returning to the main program.";
 		system("timeout 1 >nul");
 		NormalExecute("DepotDownloaderConsoleTool.exe");

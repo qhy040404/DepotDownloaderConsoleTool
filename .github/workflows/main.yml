@@ -33,8 +33,8 @@ jobs:
       - name: Compile
         run: |
             cd src
-            g++ -o Source.cpp exe.cpp func_ez.cpp
+            g++ -o test.o exe.cpp func_ez.cpp Source.cpp
       - name: Helper-Compile
         run: |
             cd DotnetInstallHelper/src
-            g++ -o Source.cpp arch.cpp exe.cpp Mgr.cpp
+            g++ -o helper-test.o arch.cpp exe.cpp Mgr.cpp Source.cpp

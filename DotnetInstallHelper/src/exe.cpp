@@ -14,16 +14,7 @@ void Execute_x86()
 	si_x86.cb = sizeof(si_x86);
 	ZeroMemory(&pi_x86, sizeof(pi_x86));
 
-	CreateProcess(NULL,
-		path,
-		NULL,
-		NULL,
-		FALSE,
-		0,
-		NULL,
-		NULL,
-		&si_x86,
-		&pi_x86);
+	CreateProcess(NULL, path, NULL, NULL, FALSE, 0, NULL, NULL, &si_x86, &pi_x86);
 
 	WaitForSingleObject(pi_x86.hProcess, INFINITE);
 
@@ -43,16 +34,7 @@ void Execute_x64()
 	si_x64.cb = sizeof(si_x64);
 	ZeroMemory(&pi_x64, sizeof(pi_x64));
 
-	CreateProcess(NULL,
-		path,
-		NULL,
-		NULL,
-		FALSE,
-		0,
-		NULL,
-		NULL,
-		&si_x64,
-		&pi_x64);
+	CreateProcess(NULL, path, NULL, NULL, FALSE, 0, NULL, NULL, &si_x64, &pi_x64);
 
 	WaitForSingleObject(pi_x64.hProcess, INFINITE);
 

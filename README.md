@@ -10,7 +10,7 @@
 A tool for [SteamRE/DepotDownloader](https://github.com/SteamRE/DepotDownloader)
 
 ## Includes
-- This tool includes [SteamRE/DepotDownloader](https://github.com/SteamRE/DepotDownloader) commit ```4acc41f```
+- This tool includes [SteamRE/DepotDownloader](https://github.com/SteamRE/DepotDownloader) commit ```72683ef```
 ## Introduction
 - The tool makes it easier to use the downloader.
 - The things you only need to prepare are AppID, depot ID, manifest ID,(username, password(if you want to download paid contents)).

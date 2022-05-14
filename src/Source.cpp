@@ -4,8 +4,8 @@
 #include <string>
 #include <windows.h>
 #include <io.h>
-#include "../header/func_ez.h"
-#include "../header/exe.h"
+#include "../header/func_ez.hpp"
+#include "../header/exe.hpp"
 using namespace std;
 
 int main(void)

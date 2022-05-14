@@ -18,30 +18,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Source.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Mgr.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="src\arch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="src\exe.cpp">
+    <ClCompile Include="src\source.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header\Mgr.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="header\arch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="header\exe.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="header\arch.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="header\exe.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="header\mgr.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

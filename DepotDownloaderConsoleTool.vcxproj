@@ -139,9 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\exe.cpp" />
-    <ClCompile Include="src\func_ez.cpp" />
-    <ClCompile Include="src\Source.cpp" />
+    <ClCompile Include="src\source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\runtime-x64.exe" />
@@ -150,8 +148,8 @@
     <None Include="setup\without-netinstaller.iss" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header\exe.h" />
-    <ClInclude Include="header\func_ez.h" />
+    <ClInclude Include="header\exe.hpp" />
+    <ClInclude Include="header\func_ez.hpp" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

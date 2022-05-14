@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 #include <Windows.h>
-#include "../header/exe.h"
-#include "../header/Mgr.h"
-#include "../header/arch.h"
+#include "../header/exe.hpp"
+#include "../header/Mgr.hpp"
+#include "../header/arch.hpp"
 using namespace std;
 
 int main(int argc, char* argv[])

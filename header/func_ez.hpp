@@ -28,12 +28,5 @@ int checkArch()
 
 bool checkVer()
 {
-	if (!_access("DotnetInstallHelper.exe", 0))
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return !_access("DotnetInstallHelper.exe", 0);
 }

@@ -4,41 +4,40 @@
 #include "../header/exe.hpp"
 #include "../header/Mgr.hpp"
 #include "../header/arch.hpp"
-using namespace std;
 
 int main(int argc, char* argv[])
 {
 	system("cls");
-	cout << "Welcome to .NET installation helper." << endl << endl;
+	std::cout << "Welcome to .NET installation helper." << std::endl << std::endl;
 	if (argc == 1)
 	{
-		cout << "The program needs to be run as Administrator." << endl;
-		cout << endl;
-		cout << "Checking and restarting..." << endl;
+		std::cout << "The program needs to be run as Administrator." << std::endl;
+		std::cout << std::endl;
+		std::cout << "Checking and restarting..." << std::endl;
 		system("timeout 1 >nul");
 		Mgr(argv[0], "2");
 		return 0;
 	}
 	else if (argc == 2)
 	{
-		cout << "Let's check your system architecture first." << endl << endl;
+		std::cout << "Let's check your system architecture first." << std::endl << std::endl;
 		system("timeout 1 >nul");
 		if (checkArch() == 4)
 		{
-			cout << "Your system is x86, We are going to install x86 runtime for you." << endl;
+			std::cout << "Your system is x86, We are going to install x86 runtime for you." << std::endl;
 			system("timeout 1 >nul && cls");
-			cout << "Installing... Please wait.";
+			std::cout << "Installing... Please wait.";
 			Execute_x86();
 		}
 		else if (checkArch() == 8)
 		{
-			cout << "Your system is x64, We are going to install x64 runtime for you." << endl;
+			std::cout << "Your system is x64, We are going to install x64 runtime for you." << std::endl;
 			system("timeout 1 >nul && cls");
-			cout << "Installing... Please wait." << endl;
+			std::cout << "Installing... Please wait." << std::endl;
 			Execute_x64();
 		}
 		system("cls");
-		cout << "Installation has completed, returning to the main program.";
+		std::cout << "Installation has completed, returning to the main program.";
 		system("timeout 1 >nul");
 		NormalExecute("DepotDownloaderConsoleTool.exe");
 	}

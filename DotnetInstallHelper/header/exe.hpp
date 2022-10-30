@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 #include <Windows.h>
-using namespace std;
 
 void Execute_x86()
 {

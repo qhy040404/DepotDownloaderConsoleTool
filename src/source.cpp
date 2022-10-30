@@ -22,7 +22,7 @@ int main(void)
 	else
 	{
 		cout << ".NET Environment not available." << endl;
-		if (checkVer() == true) 
+		if (checkVer()) 
 		{
 			cout << "Starting .NET installation helper..." << endl;
 			system("timeout 1 >nul");
